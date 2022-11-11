@@ -1,0 +1,10 @@
+A = int(input("Enter an int number: "))
+A1 = str(A)
+B = A1[::-1]
+c = int(B)
+print(c)
+
+if(A1 == B):
+    print("YES")
+else:
+    print("NO")
