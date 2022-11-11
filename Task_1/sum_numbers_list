@@ -1,0 +1,43 @@
+n = int(input("Enter number of elements : "))
+  
+numbers = list(map(int,input("\nEnter the numbers : ").strip().split()))
+  
+print(numbers)
+############### 1- USING FOR LOOP
+sum_1 = 0
+ 
+list1 = numbers
+ 
+for i in range(0, len(list1)):
+    sum_1 += list1[i]
+ 
+print("Sum of elements the list1: ", sum_1)
+
+print("*"*100)
+
+############### 2- USING WHILE LOOP
+sum_2 = 0
+j = 0
+ 
+list2 = numbers
+
+while(j < len(list2)):
+    sum_2 += list2[j]
+    j += 1
+     
+print("Sum of elements the list2: ", sum_2)
+
+print("*"*100)
+
+############### 3- USING RECURTION
+list3 = numbers
+ 
+def sumOfList(list, size):
+    if (size == 0):
+        return 0
+    else:
+        return list[size - 1] + sumOfList(list, size - 1)
+ 
+sum_3 = sumOfList(list3, len(list3))
+ 
+print("Sum of elements the list3: ", sum_3)
