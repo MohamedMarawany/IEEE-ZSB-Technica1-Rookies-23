@@ -21,7 +21,7 @@ import sys
 
 def libraryFine(d1, m1, y1, d2, m2, y2):
     # Write your code here
-    if (d1<=d2 and m1==m2 and y1==y2) :
+    if (d1<=d2 and m1<=m2 and y1<=y2) or (m1<m2 and y1<=y2) or (y1<y2)  :
         return 0
     elif (d1>d2 and m1==m2 and y1==y2):
         return (15*(d1-d2))
